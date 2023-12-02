@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* ==============================
+   SECTION 1: RESET CSS
+   ============================== */
+
+html{
+    font-size: 62.5%;
+}
+body {
+	font: 1.6rem 'lobster', sans-serif;
+    display: grid;
+    grid-template-rows: repeat(auto 1fr auto);
+    min-height: 100vh;
+    background-color: #111;
+}
+h1,h2,h3{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #222;
+    font-size: inherit;
+}
+
+/* ==============================
+   SECTION 2: THEME CSS
+   ============================== */
+
+   .header h1{
+    text-align: center;
+    color: #fff;
+    line-height: 8.0rem;
+    font-size: 4.5rem;
+    padding: 1rem 0;
+    text-shadow:#e7f6ff 0 -.1rem 0,
+    #a80a02 .1rem .1rem 0,
+    #dd3705 .2rem .2rem 0,
+    #fd8e3a .3rem .3rem 0,
+    #9b0102 .4rem .4rem 0,
+    #541402 .5rem .5rem 0,
+    #333 .5rem .5rem 1rem;
+    color:#FFE200;
+
+   }
+
+   .container{
+    /* transform: translateY(50%); */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.0rem;
+    
+   }
+   .container .card{
+    position: relative;
+    width: 30rem;
+    height: 40rem;
+    cursor: pointer;
+
+   }
+
+   .container .card .imgBx{
+    position: absolute;
+    inset: 0;
+    background-color: #222;
+    border-radius: 2rem;
+   }
+
+   .container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    border-radius: 2rem;
+
+   }
+   .container .card:hover .imgBx img{
+        opacity: 0;
+        
+   }
+   .container .card .c3d{
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+   }
+   .container .card:hover .c3d{
+    opacity: 1;
+    transform: translateY(-25%);
+   }
+   
+   .card h2{
+     position: absolute;
+     bottom: 1rem;
+     left: 25%;
+     transform: translateY(-50%);
+     color: #fff;
+     font-size: 3rem;
+     font-weight: 200;
+     letter-spacing: 0.5rem;
+     background-color: #ec9a42;
+     width: 70%;
+     padding: .5rem 2rem;
+     line-height: 3.5rem;
+     z-index: 4;
+     border-radius: 1rem;
+     text-shadow: .1rem .1rem 0 #222;
+     transition: all 0.5s ease-in-out;
+     opacity: 0;
+   }
+   .card:nth-of-type(2) h2{
+    background-color: rgb(235, 83, 223);
+   }
+   .card:hover h2{
+    bottom: 3rem;
+    opacity: 1;
+   }
+   .footer{
+    color: #fff;
+    text-align: center;
+   }
+  
