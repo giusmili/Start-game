@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accessibilité site web">
+    <!-- open graph -->
+    <meta property="og:title" content="Accessibility page">
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/">
+    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg">
     <title>Accessibility page</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <div class="header">
+  <header class="header">
     <h1>
-        &#128081; Start game
+        
+        <span aria-hidden="true">&#128081;</span> Start game
     </h1>
-  </div>
-    <div class="container">
+  </header>
+
+    <main class="container">
        
-        <div class="card">
-            <div class="imgBx">
-                <img src="./asset/old.jpg" alt="old">
+    <section class="card">
+            <div class="imgBx" role="region" aria-labelledby="figure">
+                <img src="./asset/old.jpg" alt="old" id="figure">
             </div>
             <img src="./asset/old3d.png" alt="figure 3d" class="c3d">
         <h2>
             Barbarians
         </h2>
-        </div>
+    </section>
 
         
         <!-- next card -->
@@ -40,7 +46,7 @@
        <!--  end container -->
      
       
-    </div>
+    </main>
       <!-- footer -->
    <div class="footer">
     <p>&copy; - Design by GiusMili Studios - 2023</p>
